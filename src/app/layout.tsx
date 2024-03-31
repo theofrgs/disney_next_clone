@@ -14,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-white dark:bg-[#1A1C29]">
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-gray-300 dark:bg-[#1A1C29]">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -23,7 +23,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <body>{children}</body>
+          {children}
         </ThemeProvider>
       </body>
     </html>

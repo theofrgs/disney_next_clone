@@ -2,7 +2,7 @@ import { SearchResults } from "@/typings";
 
 export async function fetchFromTMDB(url: URL, cacheTime?: number) {
   url.searchParams.set("include_adult", "false");
-  url.searchParams.set("include_video", "false");
+  url.searchParams.set("include_video", "true");
   url.searchParams.set("sort_by", "popularity.desc");
   url.searchParams.set("language", "en-US");
   url.searchParams.set("page", "1");
@@ -52,4 +52,17 @@ export async function getSearchMovie(term: string) {
   url.searchParams.set("query", term);
   const data = await fetchFromTMDB(url);
   return data.results;
+}
+
+export async function getMovieVideos(movie_id: number) {
+  const url = new URL(`https://api.themoviedb.org/3/movie/${movie_id}/videos`);
+  const data = await fetchFromTMDB(url);
+  return data.results;
+}
+
+export async function getMovieDetails(movie_id: number) {
+  console.log(`https://api.themoviedb.org/3/movie/${movie_id}`);
+  const url = new URL(`https://api.themoviedb.org/3/movie/${movie_id}`);
+  const data = await fetchFromTMDB(url);
+  return data;
 }

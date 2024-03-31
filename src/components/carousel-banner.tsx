@@ -17,10 +17,7 @@ function CarouselBanner({ movies }: Props) {
   ]);
 
   return (
-    <div
-      ref={emblaRef}
-      className="overflow-hidden lg:-mt-40 relative cursor-pointer"
-    >
+    <div ref={emblaRef} className="overflow-hidden relative cursor-pointer">
       <div className="flex">
         {movies.map((movie) => (
           <div
@@ -33,7 +30,7 @@ function CarouselBanner({ movies }: Props) {
               width={1920}
               height={1080}
             />
-            <div className="hidden lg:inline absolute mt-0 top-0 z-20 pt-40 lg:pt-60 left-0 lg:mt-40 bg-transparent h-full w-full bg-gradient-to-r from-gray-900/90 via-transparent to-transparent p-10 space-y-5 text-white">
+            <div className="hidden lg:inline absolute mt-0 top-0 z-20 pt-80 lg:pt-96 left-0  bg-transparent h-full w-full bg-gradient-to-r from-gray-900/90 via-transparent to-transparent p-10 space-y-5 text-white">
               <h2 className="text-5xl font-bold max-w-xl z-50">
                 {movie.title}
               </h2>
