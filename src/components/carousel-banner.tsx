@@ -26,6 +26,7 @@ function CarouselBanner({ movies }: Props) {
           >
             <Image
               src={getImagePath(movie.backdrop_path, true)}
+              className="w-full object-cover object-center "
               alt={""}
               width={1920}
               height={1080}
