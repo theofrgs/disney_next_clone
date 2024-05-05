@@ -4,7 +4,7 @@ import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "@theo.frgs disney clone",
+  title: "@theofrgs disney clone",
   description: "Disney clone NextJs",
 };
 
