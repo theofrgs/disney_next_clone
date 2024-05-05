@@ -4,8 +4,8 @@ import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "Théo Projects Vault",
-  description: "Théo Fargeas project vault",
+  title: "@theo.frgs disney clone",
+  description: "Disney clone NextJs",
 };
 
 export default function RootLayout({
